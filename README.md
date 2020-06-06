@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
 
 In the project directory, you can run:
@@ -70,4 +67,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 =======
 # web
 This is the web version of Trybesz
->>>>>>> 2f53f219e30535a2cd96355698d64ebd3e9b745b
