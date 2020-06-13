@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import styled, { withTheme } from 'styled-components/macro';
+import styled from 'styled-components/macro';
 
 const Root = styled.button`
     align-items: center;
@@ -41,10 +41,10 @@ class Button extends Component {
     };
 
     static defaultProps = {
-        color: '#FFF',
+        color: '#fff',
         disabled: false,
         loading: false,
-        type: 'outline',
+        type: 'button',
         size: 'normal',
         margin: null,
         loadingBackgroundColor: '#fff #fff rgba(255, 255, 255, 0)',
@@ -66,8 +66,6 @@ class Button extends Component {
             onClick,
             loading,
             icon,
-            loadingBackgroundColor,
-            loadingColor,
             style,
         } = this.props;
 
@@ -92,4 +90,4 @@ class Button extends Component {
     }
 }
 
-export default withTheme(Button);
+export default Button;

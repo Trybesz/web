@@ -20,10 +20,10 @@ const SnackBar = () => {
     return (
         <View>
             <ButtonWrapper>
-                <Button label={'Login'} onClick={''} />
+                <Button label={'Login'} onClick={<Link to={'/login'} />} />
             </ButtonWrapper>
             <ButtonWrapper>
-                <Button label={'Register'} onClick={''} />
+                <Button label={'Register'} onClick={<Link to={'/register'}/>} />
             </ButtonWrapper>
         </View>
     );

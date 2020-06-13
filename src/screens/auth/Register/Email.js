@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components/macro';
 import Button from 'components/Button';
 
-const Email = (updateStage, updateUser) => {
+const Email = ({updateStage, updateUser}) => {
     const [email, setEmail] = useState('');
 
     const goToNextStage = () => {

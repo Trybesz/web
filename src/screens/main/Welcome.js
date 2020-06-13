@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components/macro';
 import PictureCarousel from 'components/PictureCarousal';
 import SnackBar from 'components/SnackBar';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Stage from 'screens/auth/Stage';
+import Login from 'screens/auth/Login';
 
 const View = styled.div`
     display: flex;
@@ -46,6 +49,9 @@ const Welcome = () => {
         <>
             <PictureCarousel />
             <SnackBar />
+        <Route exact path="/" component={Welcome} />
+          <Route path="/register" component={Stage} />
+          <Route exact path="/login" component={Login} />
         </>
     );
 };

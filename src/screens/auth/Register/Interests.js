@@ -16,7 +16,7 @@ const BioLabel = styled.label``;
 
 const Input = styled.input``;
 
-const Interests = (updateStage, updateUser) => {
+const Interests = ({updateStage, updateUser}) => {
     const selected = ['rock climbing'];
     const goToNextStage = () => {
         updateUser({ selected });

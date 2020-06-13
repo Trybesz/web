@@ -1,13 +1,10 @@
 import React from 'react';
-
-import SnackBar from 'components/SnackBar';
+import {BrowserRouter as Router} from 'react-router-dom';
 import Welcome from 'screens/main/Welcome';
 
 const App = () => {
     return (
-        <>
             <Welcome />
-        </>
     );
 };
 

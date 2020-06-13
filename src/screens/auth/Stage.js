@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import styled from 'styled-components/macro';
 import Button from 'components/Button';
 
@@ -11,6 +11,8 @@ import Password from 'screens/auth/Register/Password';
 import Interests from 'screens/auth/Register/Interests';
 import Prefer from 'screens/auth/Register/Prefer';
 import Profile from 'screens/auth/Register/Profile';
+
+import location from 'assets/location-data';
 
 const View = styled.div``;
 
@@ -33,9 +35,7 @@ const Stage = () => {
     };
 
     useEffect(() => {
-        fetch('https://raw.githubusercontent.com/lutangar/cities.json/master/cities.json').then((value) => {
-            fetchData(value);
-        });
+        fetchData(location)
     }, []);
 
     const updateUser = async (data) => {
@@ -56,18 +56,18 @@ const Stage = () => {
 
         if (user.username) body.username = user.username;
 
-        axios.post('auth/register', body);
+        axios.post('/register', body);
     }, []);
 
     return (
         <View>
-            {stage === 'name' && <Name updateStage={setStage} />}
-            {stage === 'username' && <Username updateStage={setStage} />}
-            {stage === 'email' && <Email updateStage={setStage} />}
-            {stage === 'password' && <Password updateStage={setStage} />}
-            {stage === 'interests' && <Interests updateStage={setStage} />}
-            {stage === 'prefer' && <Prefer updateStage={setStage} data={json} />}
-            {stage === 'profile' && <Profile finishSetup={registerUser} />}
+            {stage === 'name' && <Name updateStage={setStage} updateUser={updateUser} />}
+            {stage === 'username' && <Username updateStage={setStage} updateUser={updateUser}/>}
+            {stage === 'email' && <Email updateStage={setStage} updateUser={updateUser} />}
+            {stage === 'password' && <Password updateStage={setStage} updateUser={updateUser} />}
+            {stage === 'interests' && <Interests updateStage={setStage} updateUser={updateUser} />}
+            {stage === 'prefer' && <Prefer updateStage={setStage} updateUser={updateUser} data={json} />}
+            {stage === 'profile' && <Profile finishSetup={registerUser} updateUser={updateUser} data={json} />}
         </View>
     );
 };
