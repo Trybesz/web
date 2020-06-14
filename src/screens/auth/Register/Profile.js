@@ -17,7 +17,7 @@ const BioLabel = styled.label``;
 
 const Input = styled.input``;
 
-const Profile = ({finishSetup, updateUser, data}) => {
+const Profile = ({ finishSetup, updateProfile, data }) => {
     const [boarding_Status, setBoardingStatus] = useState('');
     const [location, setLocation] = useState({ lat: '', lng: '' });
     const [bio, setBio] = useState('');
@@ -31,16 +31,9 @@ const Profile = ({finishSetup, updateUser, data}) => {
 
     return (
         <View>
-        <H1>Choose a location that you would prefer</H1>
-        {data.map((e) => {
-            <>
-                <CountryLabel>{e.state}</CountryLabel>
-                <StateLabel>{address}</StateLabel>
-                <LocationOption label={e.city} onClick={getAddress(e)} />
-            </>;
-        })}
-        <Button label='Finish Set Up' onClick={finishSetup} />
-    </View>
+            <H1>Choose a location that you would prefer</H1>
+            <Button label='Finish Set Up' onClick={finishSetup} />
+        </View>
     );
 };
 

@@ -16,10 +16,10 @@ const BioLabel = styled.label``;
 
 const Input = styled.input``;
 
-const Interests = ({updateStage, updateUser}) => {
+const Interests = ({ updateStage, updateInterests }) => {
     const selected = ['rock climbing'];
-    const goToNextStage = () => {
-        updateUser({ selected });
+    const goToNextStage = async () => {
+        updateInterests({ interests: selected });
         updateStage('prefer');
     };
 
