@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import styled from 'styled-components/macro';
 import geoServices from 'utils/geocode';
@@ -18,13 +17,13 @@ const BioLabel = styled.label``;
 
 const Input = styled.input``;
 
-const Prefer = ({updateStage, updateUser, data}) => {
+const Prefer = ({ updateStage, updatePreferences, data }) => {
     const [location, setLocation] = useState({ lat: '', lng: '' });
 
     const [address, setAddress] = useState('');
 
-    const goToNextStage = () => {
-        updateUser({ location });
+    const goToNextStage = async () => {
+        updatePreferences({ location });
         updateStage('profile');
     };
 
@@ -36,13 +35,6 @@ const Prefer = ({updateStage, updateUser, data}) => {
     return (
         <View>
             <H1>Choose a location that you would prefer</H1>
-            {data.map((e) => {
-                <>
-                    <CountryLabel>{e.state}</CountryLabel>
-                    <StateLabel>{address}</StateLabel>
-                    <LocationOption label={e.city} onClick={getAddress(e)} />
-                </>;
-            })}
             <Button label='Profile' onClick={goToNextStage} />
         </View>
     );

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components/macro';
 
@@ -20,10 +20,10 @@ const SnackBar = () => {
     return (
         <View>
             <ButtonWrapper>
-                <Button label={'Login'} onClick={<Link to={'/login'} />} />
+                <Button isRoute={true} label={'Login'} route={'/login'} />
             </ButtonWrapper>
             <ButtonWrapper>
-                <Button label={'Register'} onClick={<Link to={'/register'}/>} />
+                <Button isRoute={true} label={'Register'} route={'/register'} />
             </ButtonWrapper>
         </View>
     );

@@ -1,43 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components/macro';
-import PictureCarousel from 'components/PictureCarousal';
+import Picture from 'components/Picture';
 import SnackBar from 'components/SnackBar';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import Stage from 'screens/auth/Stage';
-import Login from 'screens/auth/Login';
 
-const View = styled.div`
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    max-height: 100vh;
-    background-image: url(${({ picture }) => picture || null});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 3;
-`;
-
-const Container = styled(View)`
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    max-width: 1500px;
-    padding: 0 20px;
-    position: relative;
-    width: 100%;
-    z-index: 2;
-`;
+import compass from 'assets/compass.jpg';
 
 const H1 = styled.h1`
     font-family: 'AvenirNextRoundedW01-Re', Arial, sans-serif;
-    font-size: 4em;
+    font-size: 3.75em;
     font-weight: 100;
     color: #fff;
     letter-spacing: -2px;
-    line-height: 1.2;
-    margin: 110px 0 0;
-    padding: 0 20px;
+    padding: 0 10px;
     position: relative;
     z-index: 4;
     -webkit-font-smoothing: antialiased;
@@ -45,13 +19,20 @@ const H1 = styled.h1`
 `;
 
 const Welcome = () => {
+    const node = (
+        <>
+            <H1>Want to find a nice place</H1>
+            <H1> But struggling to afford it, and can't find roommates</H1>
+            <H1>Welcome to Tribes</H1>
+            <H1>The newest innovation for roommate searching</H1>
+            <H1>We take your interests and preferences to match with other individuals</H1>
+            <H1>Join today!</H1>
+        </>
+    );
     return (
         <>
-            <PictureCarousel />
+            <Picture picture={compass} node={node} />
             <SnackBar />
-        <Route exact path="/" component={Welcome} />
-          <Route path="/register" component={Stage} />
-          <Route exact path="/login" component={Login} />
         </>
     );
 };

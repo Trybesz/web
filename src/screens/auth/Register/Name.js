@@ -1,19 +1,30 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/macro';
+import Picture from 'components/Picture';
 import Button from 'components/Button';
 
-const Password = ({updateStage, updateUser}) => {
-    const [name, setName] = useState('');
+import complex1 from 'assets/Complex-1.jpg';
 
-    const goToNextStage = () => {
-        updateUser({ name });
+const Password = ({ updateStage, updateName }) => {
+    const [name, setName] = useState('');
+    
+
+    function goToNextStage() {
+        updateName({ name });
         updateStage('username');
-    };
+    }
+
+    const renderName = 
+            <form onSubmit={goToNextStage}>
+                <label>
+                    Name: 
+                <input type='text' value={name} onChange={(e) => setName(e)}/>
+                </label>
+                <Button label={'username'} onClick={goToNextStage} />
+            </form>
 
     return (
-        <>
-            <Button label={'username'} onClick={goToNextStage} />
-        </>
+        <Picture picture={complex1} node={renderName} />
     );
 };
 
