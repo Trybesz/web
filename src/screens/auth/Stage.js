@@ -22,7 +22,11 @@ const Stage = () => {
         email: '',
         password: '',
         interests: [''],
-        prefer: null,
+        desires: {
+            location:{lat: '', lng: ''},
+            price_range: '',
+            num_of_roommates: '',
+        },
         profile: '',
         boarding_status: '',
     });
@@ -73,7 +77,7 @@ const Stage = () => {
         <View>
             {stage === 'basic' && <Basic updateUser={updateUser} updateStage={updateStage} />}
             {stage === 'prefer' && <Prefer updateStage={updateStage} updatePreferences={updateUser} data={json} />}
-            {stage === 'profile' && <Profile finishSetup={registerUser} updateProfile={updateUser} data={json} />}
+            {stage === 'profile' && <Profile finishSetup={registerUser} updateProfile={updateUser} />}
         </View>
     );
 };

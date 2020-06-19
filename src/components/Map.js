@@ -5,9 +5,9 @@ import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 const PreferMap = styled(Map)`
     max-width: 700px;
-    max-height: 700px;
-    top: 30vh;
-    left: 30vh;
+    max-height: 400px;
+    top: 50vh;
+    left: 15vh;
 `;
 
 class MapCharts extends Component {
@@ -26,7 +26,8 @@ class MapCharts extends Component {
             >
                 {data.map((e) => (
                     <Marker
-                        onClick={() => setLocation({ lat: e.lat, lng: e.lng })}
+                        key={e.id}
+                        onClick={() => setLocation(e)}
                         position={{ lat: e.lat, lng: e.lng }}
                     />
                 ))}
