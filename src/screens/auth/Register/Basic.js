@@ -7,8 +7,6 @@ import Input from 'components/Input';
 
 import complex1 from 'assets/Complex-1.jpg';
 
-
-
 const NewForm = styled.form`
     align-content: center;
 `;
@@ -26,15 +24,15 @@ const NewButton = styled(Button)`
         left: 0;
     }
 `;
- const NewInformation = styled.h1`
-    @media( max-width: 767px){
+const NewInformation = styled.h1`
+    @media (max-width: 767px) {
         font-size: 2.2em;
         font-weight: 450;
     }
- `;
- const View = styled.div`
+`;
+const View = styled.div`
     z-index: 1;
- `;
+`;
 
 const Basic = ({ updateStage, updateUser }) => {
     const [name, setName] = useState('');

@@ -31,7 +31,7 @@ const Prefer = ({ updateStage, updatePreferences, data }) => {
     const renderNode = (
         <View>
             <H1>Choose a location that you would prefer</H1>
-                <MapCharts data={data} setLocation={setLocation}/>
+            <MapCharts data={data} setLocation={setLocation} />
             <Button label='Profile' onClick={goToNextStage} />
         </View>
     );
