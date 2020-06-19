@@ -49,26 +49,25 @@ const Profile = ({ finishSetup, updateProfile, data }) => {
 
     const finalizeProfile = () => {
         getAddress();
-        updateProfile({boarding_Status, location, bio});
+        updateProfile({ boarding_Status, location, bio });
         finishSetup();
-    }
+    };
 
-    const renderNode = 
-    <View>
-    <ProfileForm title='Create your profile' onSubmit={finalizeProfile}>
-    <ProfileInformation>Current address:</ProfileInformation>
-    <ProfileInput type='text' value={address} onChange={(e) => setAddress(e.target.value)}/>
-    <ProfileInformation>Add a bio:</ProfileInformation>
-    <ProfileInput type='text' value={bio} onChange={(e) => setBio(e.target.value)}/>
-    <ProfileInformation>Boarding status:</ProfileInformation>
-    <ProfileInput type='text' value={boarding_Status} onChange={(e) => setBoardingStatus(e.target.value)}/>
-    <Button label='Finish Set Up' type='submit'/>
-    </ProfileForm>
-</View>
-
-    return (
-        <Picture picture={friends2} node={renderNode} />
+    const renderNode = (
+        <View>
+            <ProfileForm title='Create your profile' onSubmit={finalizeProfile}>
+                <ProfileInformation>Current address:</ProfileInformation>
+                <ProfileInput type='text' value={address} onChange={(e) => setAddress(e.target.value)} />
+                <ProfileInformation>Add a bio:</ProfileInformation>
+                <ProfileInput type='text' value={bio} onChange={(e) => setBio(e.target.value)} />
+                <ProfileInformation>Boarding status:</ProfileInformation>
+                <ProfileInput type='text' value={boarding_Status} onChange={(e) => setBoardingStatus(e.target.value)} />
+                <Button label='Finish Set Up' type='submit' />
+            </ProfileForm>
+        </View>
     );
+
+    return <Picture picture={friends2} node={renderNode} />;
 };
 
 export default Profile;

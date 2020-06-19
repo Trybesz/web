@@ -11,8 +11,8 @@ const getLocationFromCoords = async (lat, lng, setAddress) => {
 };
 
 const getCoordsFromLocation = async (location, setLocation) => {
-    await Geocode.fromAddress(location).then((value)=>{
-        setLocation({lat: value.results[0].lat, lng: value.results[0].lng})
+    await Geocode.fromAddress(location).then((value) => {
+        setLocation({ lat: value.results[0].lat, lng: value.results[0].lng });
     });
 };
 

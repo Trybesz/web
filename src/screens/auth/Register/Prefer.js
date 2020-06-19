@@ -6,7 +6,7 @@ import Button from 'components/Button';
 import Picture from 'components/Picture';
 
 import MapCharts from 'components/Map';
-import Input from 'components/Input'; 
+import Input from 'components/Input';
 
 import complex2 from 'assets/Complex-2.jpg';
 
@@ -45,7 +45,7 @@ const Prefer = ({ updateStage, updatePreferences, data }) => {
     const [address, setAddress] = useState('');
 
     const goToNextStage = async () => {
-        updatePreferences({ desires: {location, price_range, num_of_roommates} });
+        updatePreferences({ desires: { location, price_range, num_of_roommates } });
         updateStage('profile');
     };
 
@@ -58,13 +58,13 @@ const Prefer = ({ updateStage, updatePreferences, data }) => {
         <View>
             <PreferForm onSubmit={goToNextStage}>
                 <PreferInformation>Price range</PreferInformation>
-                <PreferInput  type='text' value={price_range} onChange={(e)=>setPriceRange(e.target.value)} />
+                <PreferInput type='text' value={price_range} onChange={(e) => setPriceRange(e.target.value)} />
                 <PreferInformation>Number of Roommates</PreferInformation>
-                <PreferInput  type='text' value={num_of_roommates} onChange={(e)=>setNumRoommates(e.target.value)} />
-            <PreferInformation>Choose a location that you would prefer</PreferInformation>
-            <MapCharts data={data} setLocation={getAddress} />
-            <PreferButton label='Profile' type='submit'/>
-        </PreferForm>
+                <PreferInput type='text' value={num_of_roommates} onChange={(e) => setNumRoommates(e.target.value)} />
+                <PreferInformation>Choose a location that you would prefer</PreferInformation>
+                <MapCharts data={data} setLocation={getAddress} />
+                <PreferButton label='Profile' type='submit' />
+            </PreferForm>
         </View>
     );
 

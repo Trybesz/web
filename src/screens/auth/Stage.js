@@ -23,7 +23,7 @@ const Stage = () => {
         password: '',
         interests: [''],
         desires: {
-            location:{lat: '', lng: ''},
+            location: { lat: '', lng: '' },
             price_range: '',
             num_of_roommates: '',
         },

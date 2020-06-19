@@ -25,11 +25,7 @@ class MapCharts extends Component {
                 style={{ width: '100%', height: '100%', position: 'relative' }}
             >
                 {data.map((e) => (
-                    <Marker
-                        key={e.id}
-                        onClick={() => setLocation(e)}
-                        position={{ lat: e.lat, lng: e.lng }}
-                    />
+                    <Marker key={e.id} onClick={() => setLocation(e)} position={{ lat: e.lat, lng: e.lng }} />
                 ))}
             </PreferMap>
         );
