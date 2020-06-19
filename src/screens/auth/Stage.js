@@ -4,10 +4,7 @@ import styled from 'styled-components/macro';
 
 import axios from 'axios';
 
-import Name from 'screens/auth/Register/Name';
-import Username from 'screens/auth/Register/Username';
-import Email from 'screens/auth/Register/Email';
-import Password from 'screens/auth/Register/Password';
+import Basic from 'screens/auth/Register/Basic';
 import Interests from 'screens/auth/Register/Interests';
 import Prefer from 'screens/auth/Register/Prefer';
 import Profile from 'screens/auth/Register/Profile';
@@ -15,7 +12,7 @@ import Profile from 'screens/auth/Register/Profile';
 import location from 'assets/location-data';
 
 const View = styled.div`
-    z-index: 1000;
+    z-index: 1;
 `;
 
 const Stage = () => {
@@ -31,7 +28,15 @@ const Stage = () => {
     });
 
     const [json, setJson] = useState(null);
-    const [stage, setStage] = useState('name');
+    const [stage, setStage] = useState('basic');
+    const [isOpen, setIsOpen] = useState(true);
+
+    const updateStage = useCallback(
+        (update) => {
+            if (stage !== update) setStage(update);
+        },
+        [stage],
+    );
 
     const fetchData = (value) => {
         setJson(value);
@@ -50,11 +55,13 @@ const Stage = () => {
 
         const body = {
             name: user.name,
-            phone: user.phone,
-            countryCode: user.countryCode,
+            username: user.username,
             email: user.email,
             password: user.password,
-            code: user.code,
+            interests: user.interests,
+            prefer: user.prefer,
+            profile: user.profile,
+            boarding_status: user.boarding_status,
         };
 
         if (user.username) body.username = user.username;
@@ -64,12 +71,8 @@ const Stage = () => {
 
     return (
         <View>
-            {stage === 'name' && <Name updateStage={setStage} updateName={updateUser} />}
-            {stage === 'username' && <Username updateStage={setStage} updateUsername={updateUser} />}
-            {stage === 'email' && <Email updateStage={setStage} updateEmail={updateUser} />}
-            {stage === 'password' && <Password updateStage={setStage} updatePassword={updateUser} />}
-            {stage === 'interests' && <Interests updateStage={setStage} updateInterests={updateUser} />}
-            {stage === 'prefer' && <Prefer updateStage={setStage} updatePreferences={updateUser} data={json} />}
+            {stage === 'basic' && <Basic updateUser={updateUser} updateStage={updateStage} />}
+            {stage === 'prefer' && <Prefer updateStage={updateStage} updatePreferences={updateUser} data={json} />}
             {stage === 'profile' && <Profile finishSetup={registerUser} updateProfile={updateUser} data={json} />}
         </View>
     );

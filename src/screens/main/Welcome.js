@@ -5,6 +5,13 @@ import SnackBar from 'components/SnackBar';
 
 import compass from 'assets/compass.jpg';
 
+const View = styled.div`
+    height: 100vh;
+    max-width: 2200 px;
+    width: 100%;
+    z-index: 9;
+`;
+
 const H1 = styled.h1`
     font-family: 'AvenirNextRoundedW01-Re', Arial, sans-serif;
     font-size: 3.75em;
@@ -30,10 +37,10 @@ const Welcome = () => {
         </>
     );
     return (
-        <>
+        <View>
             <Picture picture={compass} node={node} />
             <SnackBar />
-        </>
+        </View>
     );
 };
 export default Welcome;

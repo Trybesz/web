@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/macro';
+import Picture from 'components/Picture';
 import Button from 'components/Button';
+
+import Input from 'components/Input';
+
+import complex2 from 'assets/Complex-2.jpg';
 
 const View = styled.div``;
 
 const H1 = styled.h1``;
-
-const LocationOption = styled.option``;
-
-const CountryLabel = styled.label``;
-
-const StateLabel = styled.label``;
-
-const BioLabel = styled.label``;
-
-const Input = styled.input``;
 
 const Interests = ({ updateStage, updateInterests }) => {
     const selected = ['rock climbing'];

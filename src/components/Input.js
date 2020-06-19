@@ -58,6 +58,7 @@ const Label = styled.label`
     font-weight: 600;
     margin: 0 15px 0 0;
     user-select: none;
+    color: #000;
 `;
 
 const NoteRow = styled.div`
@@ -66,7 +67,7 @@ const NoteRow = styled.div`
 `;
 
 const Note = styled.div`
-    color: #aaa;
+    color: #222;
     font-size: 1.4em;
     font-weight: 400;
     line-height: 1.4;
@@ -74,9 +75,9 @@ const Note = styled.div`
 `;
 
 const Control = styled.input`
-    background-color: #ddd;
-    border: 2px solid #ddd;
-    color: #ddd;
+    background-color: #333;
+    border: 2px solid #333;
+    color: #000;
     font-size: 1.6em;
     outline: none;
     padding: 20px 16px;

@@ -8,15 +8,15 @@ const View = styled.div`
     background-image: url(${({ picture }) => picture || null});
     background-position: center;
     background-repeat: no-repeat;
+    background-opacity: 0.8;
     background-size: cover;
-    height: 100%;
+    min-height: 100vh;
     z-index: 3;
 `;
 
 const Container = styled(View)`
-    display: flex;
-    flex-direction: column;
-    max-width: 1500px;
+    display: grid;
+    grid-direction: column;
     padding: 0 20px;
     position: relative;
     width: 100%;
