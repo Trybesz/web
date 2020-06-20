@@ -45,7 +45,7 @@ const Prefer = ({ updateStage, updatePreferences, data }) => {
     const [address, setAddress] = useState('');
 
     const goToNextStage = async () => {
-        updatePreferences({ desires: { location, price_range, num_of_roommates } });
+        updatePreferences({ desires: { address, location, price_range, num_of_roommates } });
         updateStage('profile');
     };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Welcome from 'screens/main/Welcome';
 import Stage from 'screens/auth/Stage';
 import Login from 'screens/auth/Login';

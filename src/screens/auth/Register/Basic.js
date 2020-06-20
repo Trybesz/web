@@ -39,7 +39,6 @@ const Basic = ({ updateStage, updateUser }) => {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [isOpen, setIsOpen] = useState(true);
 
     const goToNextStage = (e) => {
         e.preventDefault();

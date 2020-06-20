@@ -62,7 +62,7 @@ const Profile = ({ finishSetup, updateProfile, data }) => {
                 <ProfileInput type='text' value={bio} onChange={(e) => setBio(e.target.value)} />
                 <ProfileInformation>Boarding status:</ProfileInformation>
                 <ProfileInput type='text' value={boarding_status} onChange={(e) => setBoardingStatus(e.target.value)} />
-                <Button label='Finish Set Up' type='submit' />
+                <ProfileButton label='Finish Set Up' type='submit' />
             </ProfileForm>
         </View>
     );

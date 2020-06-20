@@ -22,6 +22,7 @@ const Stage = () => {
         password: '',
         interests: [''],
         desires: {
+            address: '',
             location: { lat: '', lng: '' },
             price_range: '',
             num_of_roommates: '',
@@ -32,7 +33,6 @@ const Stage = () => {
 
     const [json, setJson] = useState(null);
     const [stage, setStage] = useState('basic');
-    const [isOpen, setIsOpen] = useState(true);
 
     const updateStage = useCallback(
         (update) => {

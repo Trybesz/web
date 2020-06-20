@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components/macro';
 import Picture from 'components/Picture';
 import SnackBar from 'components/SnackBar';
