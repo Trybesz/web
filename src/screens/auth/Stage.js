@@ -5,7 +5,6 @@ import styled from 'styled-components/macro';
 import axios from 'axios';
 
 import Basic from 'screens/auth/Register/Basic';
-import Interests from 'screens/auth/Register/Interests';
 import Prefer from 'screens/auth/Register/Prefer';
 import Profile from 'screens/auth/Register/Profile';
 
@@ -27,7 +26,7 @@ const Stage = () => {
             price_range: '',
             num_of_roommates: '',
         },
-        profile: '',
+        bio: '',
         boarding_status: '',
     });
 
@@ -63,14 +62,14 @@ const Stage = () => {
             email: user.email,
             password: user.password,
             interests: user.interests,
+            bio: user.bio,
             prefer: user.prefer,
-            profile: user.profile,
             boarding_status: user.boarding_status,
         };
 
         if (user.username) body.username = user.username;
 
-        axios.post('/register', body);
+        axios.post('http//localhost:8080/auth/register', body);
     }, [userRef]);
 
     return (

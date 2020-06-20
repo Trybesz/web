@@ -37,7 +37,7 @@ const View = styled.div`
 `;
 
 const Profile = ({ finishSetup, updateProfile, data }) => {
-    const [boarding_Status, setBoardingStatus] = useState('');
+    const [boarding_status, setBoardingStatus] = useState('');
     const [location, setLocation] = useState({ lat: '', lng: '' });
     const [bio, setBio] = useState('');
 
@@ -49,7 +49,7 @@ const Profile = ({ finishSetup, updateProfile, data }) => {
 
     const finalizeProfile = () => {
         getAddress();
-        updateProfile({ boarding_Status, location, bio });
+        updateProfile({ boarding_status, location, bio });
         finishSetup();
     };
 
@@ -61,7 +61,7 @@ const Profile = ({ finishSetup, updateProfile, data }) => {
                 <ProfileInformation>Add a bio:</ProfileInformation>
                 <ProfileInput type='text' value={bio} onChange={(e) => setBio(e.target.value)} />
                 <ProfileInformation>Boarding status:</ProfileInformation>
-                <ProfileInput type='text' value={boarding_Status} onChange={(e) => setBoardingStatus(e.target.value)} />
+                <ProfileInput type='text' value={boarding_status} onChange={(e) => setBoardingStatus(e.target.value)} />
                 <Button label='Finish Set Up' type='submit' />
             </ProfileForm>
         </View>
