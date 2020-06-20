@@ -1,0 +1,246 @@
+.raf-link {
+    color: #77bdb7 !important;
+}
+
+.raf-reaction-icon__label {
+    color: #333;
+    font-weight: 300;
+    text-transform: capitalize;
+    margin-top: 2px;
+}
+
+.raf-reaction-icon {
+    margin: 4px 2px;
+}
+
+.raf-dropdown {
+    padding: 4px 0 0 10px;
+    position: relative;
+    top: 7px;
+}
+
+.rfu-icon-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.raf-avatar {
+    object-fit: cover;
+}
+
+.rfu-icon-button svg {
+    margin: 4px 0;
+}
+
+.rfu-icon-button svg path {
+    fill: #bbb;
+}
+
+.raf-video__video--video {
+    width: 100%;
+}
+
+.raf-button--info {
+    margin-top: 16px !important;
+    background-color: #77bdb7 !important;
+}
+
+.raf-button--info:active {
+    box-shadow: none !important;
+}
+
+.raf-comment-field__input {
+    color: #414d54;
+    font-weight: 300;
+    border-radius: 4px 0 0 4px;
+    padding: 10px 10px;
+    margin-left: 10px;
+    outline: none;
+}
+
+.raf-panel {
+    box-shadow: none !important;
+    margin-bottom: 0 !important;
+}
+
+.raf-comment-field__input {
+    width: 100%;
+}
+
+.raf-card__url {
+    color: #77bdb7 !important;
+}
+
+.raf-dropdown__box {
+    background: #fff !important;
+}
+
+.raf-dropdown__box > div > a {
+    color: #77bdb7 !important;
+}
+
+.raf-activity {
+    border-radius: 0;
+    overflow-wrap: break-word !important;
+    margin: 0;
+}
+
+.raf-audio__content--progress > div {
+    background: #77bdb7;
+}
+
+.raf-icon-button svg {
+    position: unset;
+}
+
+.raf-dropzone--accept .raf-dropzone__notifier {
+    background: #77bdb7;
+}
+
+.raf-loading-indicator__spinner {
+    border-top-color: #77bdb7;
+}
+
+.raf-status-update-form__url-list-item--active {
+    color: #77bdb7;
+}
+
+.raf-status-update-form__og-loading {
+    color: #77bdb7;
+}
+
+.raf-status-update-form__footer {
+    .raf-button {
+        align-items: center;
+        background-color: #85cfc8;
+        border-radius: 100px;
+        cursor: pointer;
+        color: #fff;
+        display: flex;
+        font-size: 1.8em;
+        font-weight: 100 !important;
+        line-height: 1.2;
+        margin: 0 0 0 auto;
+        justify-content: center;
+        opacity: 1;
+        padding: 20px 24px;
+        position: relative;
+        transition: 0.2s all ease-in-out;
+        &:hover {
+            background-color: #aaa;
+        }
+        &:disabled {
+            background-color: #85cfc8;
+            cursor: default;
+            opacity: 0.6;
+        }
+    }
+}
+
+.raf-video__video {
+    position: relative;
+    flex-direction: column;
+    height: auto;
+    font-size: 13px;
+}
+
+.raf-video__video video {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+}
+
+.raf-video__video--link {
+    margin-top: 20px;
+}
+
+.raf-video__video--link a {
+    color: #77bdb7;
+}
+
+.raf-card__image img {
+    position: relative;
+}
+
+.raf-card__image {
+    height: auto;
+}
+
+.create-modal .raf-panel-footer {
+    margin: 0;
+    padding: 10px 0 0 64px;
+}
+
+.raf-panel-header {
+    display: none;
+}
+
+/* create post */
+
+.raf-button--primary:active {
+    box-shadow: none !important;
+}
+
+.raf-panel-footer {
+    position: relative;
+    top: 16px;
+}
+
+.create-modal .raf-panel-footer > div > div {
+    flex: none !important;
+}
+
+.raf-video__frame {
+    border-radius: 0;
+    margin: 0;
+}
+
+.raf-feed-placeholder p {
+    font-size: 1.6em;
+}
+
+.raf-feed-placeholder p a {
+    color: #77bdb7;
+}
+
+// hack activity images lightbox
+#lightboxBackdrop img {
+    max-height: 75vh !important;
+}
+
+// dropdown
+
+.raf-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.raf-dropdown__button {
+    cursor: pointer;
+}
+
+.raf-dropdown__box {
+    /* Menu BG: */
+    position: absolute;
+    top: 20px;
+    right: 0;
+    display: inline-block;
+    background: #313e47;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    padding: 10px 20px;
+    min-width: 120px;
+    z-index: 9999;
+}
+
+.raf-dropdown__box ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    a {
+        font-size: 14px;
+        color: white;
+    }
+}

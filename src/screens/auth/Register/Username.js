@@ -2,17 +2,17 @@ import React, { useState } from 'react';
 import styled from 'styled-components/macro';
 import Button from 'components/Button';
 
-const Username = (updateStage, updateUser) => {
+const Username = (updateStage, updateUsername) => {
     const [username, setUsername] = useState('');
 
-    const goToNextStage = () => {
-        updateUser({ username });
+    const goToNextStage = async () => {
+        updateUsername({ username });
         updateStage('email');
     };
 
     return (
         <>
-            <Button label={'interests'} onClick={goToNextStage} />
+            <Button label={'email'} onClick={goToNextStage} />
         </>
     );
 };
