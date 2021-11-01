@@ -1,0 +1,1 @@
+export const CLEAR_STORE = '@tribes/Global/CLEAR_STORE';

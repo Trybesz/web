@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const ButtonLink = styled(Link)`
     align-items: center;
-    background-color: ${({ backgroundColor, type }) => (type === 'outline' ? 'transparent' : backgroundColor || null)};
+    background-color: ${({ backgroundcolor, type }) => (type === 'outline' ? 'transparent' : backgroundcolor || null)};
     border-radius: 100px;
     cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
     color: ${({ color, type }) => (type === 'outline' ? `#fff` : color)};
@@ -39,6 +39,12 @@ const Root = styled.button`
     transition: 0.2s all ease-in-out;
     user-select: none;
     white-space: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    @media (max-width: 767px) {
+        width: fit-content;
+    }
 `;
 
 const Label = styled.span`
@@ -113,7 +119,7 @@ class Button extends Component {
             </Root>
         ) : (
             <ButtonLink
-                backgroundColor={backgroundColor}
+                backgroundcolor={backgroundColor}
                 className={className}
                 color={color}
                 disabled={disabled}

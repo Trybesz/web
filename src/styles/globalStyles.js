@@ -29,9 +29,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     font-family: 'AvenirNextRoundedW01-Re';
     src: url('../anr.eot?#iefix');
     src: url('../anr.eot?#iefix') format('eot'),
-    url('../anr.woff2') format('woff2'),
-    url('../anr.woff') format('woff'),
-    url('../anr.ttf') format('truetype'),
     url('../anr.svg') format('svg');
 }
 
@@ -330,7 +327,7 @@ button {
 }
 
 .rta__item:not(:last-child) {
-    border-bottom: 1px solid ${({ theme }) => theme.color.lightGrey} !important;
+    border-bottom: 1px solid ${({ theme }) => theme.color.purple} !important;
 }
 
 .rta__item {
@@ -361,7 +358,7 @@ button {
 }
 
 .rc-slider-rail {
-    background-color: #e9e9e9;
+    background-color: ${({ theme }) => theme.color.white};
     border-radius: 6px;
     height: 4px;
     position: absolute;
@@ -369,7 +366,7 @@ button {
 }
 
 .rc-slider-track {
-    background-color: ${({ theme }) => theme.color.teal};
+    background-color: ${({ theme }) => theme.color.green};
     border-radius: 6px;
     height: 4px;
     left: 0;
@@ -377,8 +374,8 @@ button {
 }
 
 .rc-slider-handle {
-    background-color: ${({ theme }) => theme.color.background};
-    border: solid 4px ${({ theme }) => theme.color.teal};
+    background-color: ${({ theme }) => theme.color.purple};
+    border: solid 4px ${({ theme }) => theme.color.purple};
     border-radius: 50%;
     cursor: pointer;
     cursor: grab;
@@ -391,23 +388,23 @@ button {
 }
 
 .rc-slider-handle:focus {
-    border-color: ${({ theme }) => theme.color.teal};
+    border-color: ${({ theme }) => theme.color.green};
     box-shadow: 0 0 0 5px rgb(133, 207, 200, 0.7);
     outline: none;
 }
 
 .rc-slider-handle-click-focused:focus {
-    border-color: ${({ theme }) => theme.color.teal};
+    border-color: ${({ theme }) => theme.color.green};
     box-shadow: unset;
 }
 
 .rc-slider-handle:hover {
-    border-color: ${({ theme }) => theme.color.teal};
+    border-color: ${({ theme }) => theme.color.green};
 }
 
 .rc-slider-handle:active {
-    border-color: ${({ theme }) => theme.color.teal};
-    box-shadow: 0 0 5px ${({ theme }) => theme.color.teal};
+    border-color: ${({ theme }) => theme.color.green};
+    box-shadow: 0 0 5px ${({ theme }) => theme.color.purple};
     cursor: grabbing;
 }
 
@@ -453,7 +450,7 @@ button {
 }
 
 .rc-slider-dot-active {
-    border-color: ${({ theme }) => theme.color.teal};
+    border-color: ${({ theme }) => theme.color.purple};
 }
 
 .rc-slider-disabled {
@@ -522,6 +519,10 @@ button {
 
 .rc-slider-vertical .rc-slider-dot:last-child {
     margin-bottom: -4px;
+}
+.rc-slider-tooltip-inner {
+    color: ${({theme})=> theme.color.medGrey};
+    width: 40px;
 }
 
 // stream: notifications

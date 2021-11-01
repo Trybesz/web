@@ -1,7 +1,8 @@
 const colorsLight = {
-    purple: '#d78098',
+    purple: '#b19cd9',
     faintGrey: '#f4f4f4',
     lightGrey: '#ededed',
+    backgroundDark: '#071441',
     transparentGrey: 'rgba(200, 200, 200, 0.95)',
     ashGrey: '#ddd',
     medGrey: '#aaa',
@@ -9,10 +10,12 @@ const colorsLight = {
     darkGrey: '#555',
     dark: '#333',
     red: '#b22222',
+    white: "#F6F1F1",
+    green: "#3eb489",
 };
 
 const colorsDark = {
-    purple: '#d78098',
+    purple: '#b19cd9',
     faintGrey: 'rgba(255, 255, 255, 0.08)',
     lightGrey: 'rgba(255, 255, 255, 0.15)',
     transparentGrey: 'rgba(50, 50, 50, 0.95)',
@@ -25,7 +28,7 @@ const colorsDark = {
 };
 
 const colorsDim = {
-    purple: '#d78098',
+    purple: '#b19cd9',
     faintGrey: 'rgba(255, 255, 255, 0.08)',
     lightGrey: 'rgba(255, 255, 255, 0.15)',
     transparentGrey: 'rgba(33, 45, 61, 0.95)',

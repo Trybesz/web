@@ -5,10 +5,10 @@ import Button from 'components/Button';
 
 const View = styled.div`
     display: flex;
-    position: absolute;
+    flex-direction: column;
     z-index: 1000;
-    top: 5px;
-    right: 5px;
+    margin: 5px;
+    padding: 0 10px;
 `;
 
 const ButtonWrapper = styled.div`

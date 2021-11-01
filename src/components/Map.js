@@ -6,8 +6,10 @@ import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 const PreferMap = styled(Map)`
     max-width: 700px;
     max-height: 400px;
-    top: 50vh;
-    left: 15vh;
+    @media (max-width: ${({theme})=>theme.breakpoints.xs -1}px) {
+        max-width: 300px;
+        max-height: 200px;
+    }
 `;
 
 class MapCharts extends Component {

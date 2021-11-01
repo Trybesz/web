@@ -18,6 +18,10 @@ const SwitchRow = styled.div`
 const InputArea = styled.div`
     display: flex;
     width: 100%;
+
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
 `;
 
 const LabelRow = styled.div`
@@ -58,7 +62,6 @@ const Label = styled.label`
     font-weight: 600;
     margin: 0 15px 0 0;
     user-select: none;
-    color: #000;
 `;
 
 const NoteRow = styled.div`
@@ -77,7 +80,6 @@ const Note = styled.div`
 const Control = styled.input`
     background-color: #333;
     border: 2px solid #333;
-    color: #000;
     font-size: 1.6em;
     outline: none;
     padding: 20px 16px;
